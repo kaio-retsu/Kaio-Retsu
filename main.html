@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>para tu</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+<body>
+    <div class="greetings">
+        <span>A</span>
+        <span>M</span>
+        <span>O</span>
+        <span>R</span>
+        <span>!</span>
+    </div>
+    <div class="description">
+        <span>Te amuu!!</span>
+    </div>
+    <div class="button">
+        <button class="botones">
+            <a href="flower.html" style="color: #fff;" onclick="playAudio()">¡Apretame te tengo una sorpresa bebe!</a>
+        </button>
+    </div>
+
+    <!-- Créditos -->
+    <div class="credits">
+        <p>ten un bonito diya</p>
+    </div>
+    <script>
+        var sound = new Howl({
+            src: ['sound/Murart e Revna- Samba Paixão (Clipe Oficial).mp3'],
+            autoplay: false,
+            volume: 1.0
+        });
+
+        function playAudio() {
+            sound.play();
+            // Guardar el estado de reproducción en localStorage
+            localStorage.setItem('audioPlaying', 'true');
+        }
+    </script>
+</body>
+
+</html>
